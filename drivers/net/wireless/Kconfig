@@ -185,6 +185,8 @@ config USB_ZD1201
 	  To compile this driver as a module, choose M here: the
 	  module will be called zd1201.
 
+source "drivers/net/wireless/rtl8812au/Kconfig"
+
 config USB_NET_RNDIS_WLAN
 	tristate "Wireless RNDIS USB support"
 	depends on USB
@@ -215,6 +217,8 @@ config USB_NET_RNDIS_WLAN
 	  If you choose to build a module, it'll be called rndis_wlan.
 
 source "drivers/net/wireless/rtl818x/Kconfig"
+source "drivers/net/wireless/rtl8812au/Kconfig"
+source "drivers/net/wireless/rtl8188eus/Kconfig"
 
 config ADM8211
 	tristate "ADMtek ADM8211 support"
